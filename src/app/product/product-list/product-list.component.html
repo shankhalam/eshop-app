@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+    <p class="mat-headline-3 p-3 text-center">Amazing Animal Painting</p>
+  </div>
+  <div class="row">
+    <div class="col my-4" *ngFor="let product of products">
+      <mat-card class="product-card">
+          <img mat-card-image src="assets/images/{{product.image_url}}">
+          <mat-card-content>
+              <mat-card-title>{{product.name}}</mat-card-title>
+              <mat-card-subtitle>{{product.price | currency: 'AED'}}</mat-card-subtitle>
+          </mat-card-content>
+        </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<p class="text-center p-3 h3">Your Cart Items</p>
+<mat-card *ngFor="let item of cartItems" class="container my-3 w-50 cartCard">
+  <mat-list>
+    <mat-list-item>{{item.name}}</mat-list-item>
+    <mat-list-item>{{item.price | currency: 'AED'}}</mat-list-item>
+  </mat-list>
+</mat-card>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 text-center h4 p4"><b>Grand Total</b></div>
+    <div class="col-md-6 text-center h4 p4"><b>{{totalPrice | currency:'AED'}}</b></div>
+  </div>
+</div>
+
+  
