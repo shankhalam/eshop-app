@@ -4,8 +4,15 @@
     <p class="mat-headline-3 p-3 text-center">Amazing Animal Painting</p>
   </div>
 
-  <mat-form-field>
+  <mat-form-field class="search-field">
     <input matInput (keyup)="searchProduct($event)" placeholder="Search Products">
+  </mat-form-field>
+
+  <mat-form-field class="sort-field">
+    <mat-select (selectionChange)="sortProduct($event.value)" placeholder="Sort Products">
+      <mat-option value="priceLowHigh">Price Low to High</mat-option>
+      <mat-option value="priceHighLow">Price High to Low</mat-option>
+    </mat-select>
   </mat-form-field>
 
   <div class="row">
