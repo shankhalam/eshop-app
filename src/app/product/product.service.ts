@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Product } from '../models/product';
+import { CartModule } from '../cart/cart.module';
 
 
 @Injectable({
