@@ -3,8 +3,13 @@
   <div class="row">
     <p class="mat-headline-3 p-3 text-center">Amazing Animal Painting</p>
   </div>
+
+  <mat-form-field>
+    <input matInput (keyup)="searchProduct($event)" placeholder="Search Products">
+  </mat-form-field>
+
   <div class="row">
-    <div class="col my-4" *ngFor="let product of products">
+    <div class="col my-4" *ngFor="let product of filteredProduct">
       <mat-card class="product-card" (click)="addedToCart(product)">
           <img mat-card-image src="assets/images/{{product.image_url}}">
           <mat-card-content>
