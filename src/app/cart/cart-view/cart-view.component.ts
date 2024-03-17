@@ -19,11 +19,19 @@ export class CartViewComponent implements OnInit {
       this.totalPrice = this.cartTotal()
     })
   }
+
   cartTotal(): number{
     let total = 0
     for (let item of this.cartItems){
       total += item.price
     }
     return total
+  }
+
+  clearCart(): void{
+    this.cartService.clearCart().subscribe();
+  }
+  checkOutCart(): void{
+    this.cartService.cartCheckOut(this.cartItems).subscribe();
   }
 }
